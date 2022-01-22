@@ -28,7 +28,8 @@ various ways:
 - Clone the repo with `git clone https://github.com/tenry92/jae-ui.git`,
   run `npm install` (or `yarn`) and `npm run build` (or `yarn build`)
 
-For the CSS theme, there is currently only one available.
+You will also need to download a compatible theme, such as one from the
+[jae-ui-themes](https://github.com/tenry92/jae-ui-themes) package.
 
 Now you can link the script and theme files in your HTML and start writing your
 web application:
@@ -40,7 +41,7 @@ web application:
     <meta charset="utf-8">
     <title>Welcome Jae UI</title>
     <script src="dist/jae-ui.js" type="module"></script>
-    <link rel="stylesheet" href="themes/jae/jae.css">
+    <link rel="stylesheet" href="jae-ui-themes/flat/flat.css">
   </head>
   <body>
     ...
