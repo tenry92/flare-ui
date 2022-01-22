@@ -1,0 +1,16 @@
+<style>
+  :host {
+    display: flex;
+    flex-direction: row;
+
+    user-select: none;
+
+    border: 1px solid black;
+  }
+
+  :host([active]) {
+    border-bottom-width: 0px;
+    padding-bottom: 1px;
+  }
+</style>
+<slot></slot>

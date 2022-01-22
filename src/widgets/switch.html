@@ -1,0 +1,48 @@
+<style>
+  :host {
+    display: inline-flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+
+    cursor: default;
+    user-select: none;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    justify-content: flex-start;
+  }
+
+  :host-context([disabled]) {
+    pointer-events: none;
+  }
+
+  [part~="track"] {
+    box-sizing: border-box;
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 2em;
+    height: 1em;
+    border-radius: 9999px;
+  }
+
+  [part~="handle"] {
+    box-sizing: border-box;
+
+    background: black;
+
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+  }
+</style>
+<div part="track">
+  <div part="handle"></div>
+</div>
+<div part="label">
+  <slot></slot>
+</div>

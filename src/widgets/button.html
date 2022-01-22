@@ -1,0 +1,24 @@
+<style>
+  :host {
+    display: inline-flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+
+    cursor: default;
+    user-select: none;
+
+    flex: 0 0;
+
+    border: 1px solid black;
+    background: white;
+
+    white-space: nowrap;
+  }
+
+  :host-context([disabled]) {
+    pointer-events: none;
+  }
+</style>
+<main>
+  <slot></slot>
+</main>

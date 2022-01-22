@@ -1,0 +1,55 @@
+<style>
+  :host {
+    display: inline-flex;
+    align-items: stretch; /* vertical */
+    justify-content: stretch; /* horizontal */
+
+    cursor: default;
+    user-select: none;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    /* allo width: 100% and top: 100% for the menu */
+    position: relative;
+  }
+
+  :host-context([disabled]) {
+    pointer-events: none;
+  }
+
+  [part~="label"] {
+    flex-grow: 1;
+    padding: 0 4px;
+  }
+
+  [part~="menu"] {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    background: white;
+
+    /* make sure menu is above overlay */
+    z-index: 1;
+  }
+
+  :host(:not(:--open)) [part~="menu"] {
+    display: none;
+  }
+
+  :host(:--dropdown) [part~="menu"] {
+    top: 100%;
+  }
+
+  :host(:--dropup) [part~="menu"] {
+    transform: translateY(-100%);
+  }
+</style>
+<div part="label">Dropdown</div>
+<div part="button"></div>
+<div part="menu">
+  <slot></slot>
+</div>

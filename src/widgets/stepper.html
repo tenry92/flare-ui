@@ -1,0 +1,25 @@
+<style>
+  :host {
+    display: inline-flex;
+    flex-direction: column;
+
+    cursor: default;
+    user-select: none;
+  }
+
+  :host-context([disabled]) {
+    pointer-events: none;
+  }
+
+  svg {
+    fill: currentColor;
+    height: 1em;
+    font-size: inherit;
+  }
+
+  _prefix_button {
+    flex-grow: 1;
+  }
+</style>
+<_prefix_button part="up button" style="min-height: 0; font-size: 9px;"></_prefix_button>
+<_prefix_button part="down button" style="min-height: 0; font-size: 9px;"></_prefix_button>

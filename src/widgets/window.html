@@ -1,0 +1,97 @@
+<style>
+  :host {
+    position: absolute;
+    z-index: 1;
+
+    border: 1px solid black;
+
+    --resize-size: 5px;
+  }
+
+  .resize {
+    position: absolute;
+  }
+
+  .left.resize {
+    top: 0;
+    left: -2px;
+    bottom: 0;
+    width: var(--resize-size);
+
+    cursor: ew-resize;
+  }
+
+  .top.resize {
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: var(--resize-size);
+
+    cursor: ns-resize;
+  }
+
+  .right.resize {
+    top: 0;
+    right: -2px;
+    bottom: 0;
+    width: var(--resize-size);
+
+    cursor: ew-resize;
+  }
+
+  .bottom.resize {
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: var(--resize-size);
+
+    cursor: ns-resize;
+  }
+
+  .top.left.resize {
+    left: 0;
+    top: 0;
+    right: unset;
+    bottom: unset;
+
+    cursor: nwse-resize;
+  }
+
+  .top.right.resize {
+    right: 0;
+    top: 0;
+    left: unset;
+    bottom: unset;
+
+    cursor: nesw-resize;
+  }
+
+  .bottom.left.resize {
+    left: 0;
+    bottom: 0;
+    right: unset;
+    top: unset;
+
+    cursor: nesw-resize;
+  }
+
+  .bottom.right.resize {
+    right: 0;
+    bottom: 0;
+    left: unset;
+    top: unset;
+
+    cursor: nwse-resize;
+  }
+</style>
+<div class="top resize"></div>
+<div class="left resize"></div>
+<div class="right resize"></div>
+<div class="bottom resize"></div>
+
+<div class="top left resize"></div>
+<div class="top right resize"></div>
+<div class="bottom left resize"></div>
+<div class="bottom right resize"></div>
+
+<slot></slot>

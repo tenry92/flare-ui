@@ -1,0 +1,55 @@
+<style>
+  :host {
+    display: inline-flex;
+    align-items: stretch; /* vertically */
+    cursor: text;
+    flex-grow: 1;
+    box-sizing: border-box;
+
+    border: 1px solid black;
+    background: white;
+
+    outline: none;
+  }
+
+  main {
+    flex-grow: 1;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    /* for the placeholder */
+    position: relative;
+  }
+
+  :host([multiline]) main {
+    white-space: break-spaces;
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+
+  #content {
+    flex-grow: 1;
+    outline: none;
+
+    /* prevent auto-growing when typing more text */
+    width: 0px;
+  }
+
+  [part~="placeholder"] {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+
+    /* support for text-align */
+    width: 100%;
+  }
+</style>
+<main part="content">
+  <div id="content" contenteditable="true"></div>
+  <div part="placeholder"></div>
+</main>
+<slot></slot>

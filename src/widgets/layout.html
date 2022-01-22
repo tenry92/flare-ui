@@ -1,0 +1,27 @@
+<style>
+  :host {
+    display: flex;
+  }
+
+  :host([horizontal]) {
+    flex-direction: row;
+  }
+
+  :host([vertical]) {
+    flex-direction: column;
+  }
+
+  :host([horizontal][align="right"]),
+  :host([vertical][align="bottom"]) {
+    justify-content: flex-end;
+  }
+
+  :host([vertical][form]) {
+    display: grid;
+  }
+
+  :host([horizontal][form]) {
+    display: grid;
+  }
+</style>
+<slot></slot>

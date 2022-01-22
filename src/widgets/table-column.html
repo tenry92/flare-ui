@@ -1,0 +1,39 @@
+<style>
+  :host {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+
+    cursor: default;
+    user-select: none;
+
+    position: relative;
+
+    box-sizing: border-box;
+  }
+
+  :host(:last-child) {
+    flex-grow: 1;
+  }
+
+  .size-grab {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+
+    /* column resizing is currently experimental */
+    /* cursor: col-resize; */
+  }
+
+  .size-grab:first-of-type {
+    left: 0;
+  }
+
+  .size-grab:last-of-type {
+    right: 0;
+  }
+</style>
+<div class="left size-grab"></div>
+<slot></slot>
+<div class="right size-grab"></div>

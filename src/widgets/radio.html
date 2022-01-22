@@ -1,0 +1,50 @@
+<style>
+  :host {
+    display: inline-flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+
+    cursor: default;
+    user-select: none;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    justify-content: flex-start;
+  }
+
+  :host-context([disabled]) {
+    pointer-events: none;
+  }
+
+  [part~="button"] {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 1em;
+    height: 1em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  [part~="mark"] {
+    box-sizing: border-box;
+    width: 50%;
+    height: 50%;
+
+    background: black;
+    border-radius: 100%;
+  }
+
+  :host(:not([checked])) [part~="mark"] {
+    visibility: hidden;
+  }
+</style>
+<div part="button">
+  <div part="mark"></div>
+</div>
+<div part="label">
+  <slot></slot>
+</div>

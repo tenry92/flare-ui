@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Widget Gallery</title>
+    <script src="dist/jae-ui.js" type="module"></script>
+    <link rel="stylesheet" href="node_modules/jae-ui-themes/dist/flat/flat.css">
+  </head>
+  <body>
+    <div id="app" style="margin: 8px; padding: 8px;">
+      <jae-layout horizontal>
+        <jae-layout style="width: 400px;" vertical>
+          <jae-group-box>
+            <jae-group-box-label>Button</jae-group-box-label>
+            <jae-layout vertical data-capture="button">
+              <jae-layout horizontal>
+                <jae-button>Button</jae-button>
+                <jae-button primary>Primary Button</jae-button>
+              </jae-layout>
+              <jae-layout horizontal>
+                <jae-button disabled>Button</jae-button>
+                <jae-button disabled primary>Primary Button</jae-button>
+              </jae-layout>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Checkbox</jae-group-box-label>
+            <jae-layout vertical>
+              <jae-layout vertical data-capture="checkbox">
+                <jae-checkbox>Checkbox</jae-checkbox>
+                <jae-checkbox checked>Checkbox</jae-checkbox>
+              </jae-layout>
+              <jae-layout vertical data-capture="radio">
+                <jae-radio>Option 1</jae-radio>
+                <jae-radio checked>Option 2</jae-radio>
+              </jae-layout>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Switch</jae-group-box-label>
+            <jae-layout vertical data-capture="switch">
+              <jae-switch>Switch</jae-switch>
+              <jae-switch checked>Switch</jae-switch>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Dropdown</jae-group-box-label>
+            <jae-layout vertical data-capture="dropdown">
+              <jae-dropdown>
+                <jae-option value="red" selected>Red</jae-option>
+                <jae-option value="green" selected>Green</jae-option>
+                <jae-option value="blue" selected>Blue</jae-option>
+                <jae-option value="yellow" selected>Yellow</jae-option>
+              </jae-dropdown>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Input</jae-group-box-label>
+            <jae-layout vertical>
+              <jae-layout horizontal>
+                <jae-text-input placeholder="Placeholder"></jae-text-input>
+                <jae-text-input value="Text"></jae-text-input>
+              </jae-layout>
+              <jae-text-input multiline placeholder="Multiline"></jae-text-input>
+              <jae-text-input multiline value="First line&#10;Second line"></jae-text-input>
+              <jae-layout horizontal>
+                <jae-number-input placeholder="number"></jae-number-input>
+                <jae-number-input value="42"></jae-number-input>
+              </jae-layout>
+            </jae-layout>
+          </jae-group-box>
+        </jae-layout>
+
+        <jae-layout style="width: 400px;" vertical>
+          <jae-group-box>
+            <jae-group-box-label>Label and Help</jae-group-box-label>
+            <jae-layout vertical>
+              <jae-layout horizontal form>
+                <jae-label>Name</jae-label>
+                <jae-text-input></jae-text-input>
+
+                <jae-label>Permission</jae-label>
+                <jae-dropdown>
+                  <jae-option value="everybody" selected>Everybody</jae-option>
+                </jae-dropdown>
+                <jae-help-text>Who may use this?</jae-help-text>
+              </jae-layout>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Table</jae-group-box-label>
+            <jae-layout vertical>
+              <jae-table data-capture="table">
+                <jae-table-header>
+                  <jae-table-column>Header 1</jae-table-column>
+                  <jae-table-column>Header 2</jae-table-column>
+                  <jae-table-column>Header 3</jae-table-column>
+                </jae-table-header>
+                <jae-table-body>
+                  <jae-table-row>
+                    <jae-table-column>Item 1</jae-table-column>
+                    <jae-table-column>Item 2</jae-table-column>
+                    <jae-table-column>Item 3</jae-table-column>
+                  </jae-table-row>
+                  <jae-table-row>
+                    <jae-table-column>Item 4</jae-table-column>
+                    <jae-table-column>Item 5</jae-table-column>
+                    <jae-table-column>Item 6</jae-table-column>
+                  </jae-table-row>
+                </jae-table-body>
+              </jae-table>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Tabs</jae-group-box-label>
+            <jae-layout vertical data-capture="tabs">
+              <jae-tabview>
+                <jae-tabbar>
+                  <jae-tab active>Tab 1</jae-tab>
+                  <jae-tab>Tab 2</jae-tab>
+                  <jae-tab>Tab 3</jae-tab>
+                </jae-tabbar>
+                <jae-layout vertical>
+                  <jae-checkbox checked>Option 1</jae-checkbox>
+                  <jae-checkbox>Option 2</jae-checkbox>
+                  <jae-checkbox>Option 3</jae-checkbox>
+                </jae-layout>
+              </jae-tabview>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Navigation</jae-group-box-label>
+            <jae-layout vertical data-capture="navigation">
+              <jae-navigation>
+                <jae-navigation-item active>Home</jae-navigation-item>
+                <jae-navigation-item>Database</jae-navigation-item>
+                <jae-navigation-item>Settings</jae-navigation-item>
+                <jae-navigation-item>About</jae-navigation-item>
+              </jae-navigation>
+            </jae-layout>
+          </jae-group-box>
+
+          <jae-group-box>
+            <jae-group-box-label>Palette</jae-group-box-label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr;">
+              <div style="padding: 8px; background: var(--background-color); color: var(--on-background-color);">Background</div>
+              <div style="padding: 8px; background: var(--on-background-color); color: var(--background-color);">On Background</div>
+
+              <!-- e.g. primary buttons, checked checkboxes -->
+              <div style="padding: 8px; background: var(--primary-color); color: var(--on-primary-color);">Primary</div>
+              <div style="padding: 8px; background: var(--on-primary-color); color: var(--primary-color);">On Primary</div>
+
+              <!-- e.g. non-primary buttons, unchecked checkboxes -->
+              <div style="padding: 8px; background: var(--surface-color); color: var(--on-surface-color);">Surface</div>
+              <div style="padding: 8px; background: var(--on-surface-color); color: var(--surface-color);">On Surface</div>
+
+              <div style="padding: 8px; background: var(--success-color); color: var(--on-success-color);">Success</div>
+              <div style="padding: 8px; background: var(--on-success-color); color: var(--success-color);">On Success</div>
+
+              <div style="padding: 8px; background: var(--info-color); color: var(--on-info-color);">Info</div>
+              <div style="padding: 8px; background: var(--on-info-color); color: var(--info-color);">On Info</div>
+
+              <div style="padding: 8px; background: var(--warn-color); color: var(--on-warn-color);">Warn</div>
+              <div style="padding: 8px; background: var(--on-warn-color); color: var(--warn-color);">On Warn</div>
+
+              <div style="padding: 8px; background: var(--error-color); color: var(--on-error-color);">Error</div>
+              <div style="padding: 8px; background: var(--on-error-color); color: var(--error-color);">On Error</div>
+            </div>
+          </jae-group-box>
+        </jae-layout>
+      </jae-layout>
+    </div>
+  </body>
+</html>
