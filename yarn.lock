@@ -1017,6 +1017,11 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
+flare-ui-themes@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/flare-ui-themes/-/flare-ui-themes-0.2.0.tgz#a3dbc191b893de8daf54efa8d2a1834cfd936b12"
+  integrity sha512-iFVANM1SfBrgevbgVYmhmeSO3uXCuCo4SlK8jvthxUaFW5mUhyoMgDoEAzNYNhok+Oe8NUzwFALD99EI+Mo0DQ==
+
 flat-cache@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-3.0.4.tgz#61b0338302b2fe9f957dcc32fc2a87f1c3048b11"
@@ -1330,11 +1335,6 @@ isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
-
-jae-ui-themes@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/jae-ui-themes/-/jae-ui-themes-0.1.0.tgz#71fe1cda67ba96831e96608881d7f0b7c9c8f288"
-  integrity sha512-Qf0j2AizS9TyTzN7Vhv9ta0Yewy0keJ8Q9hulc4euCkq1bKfhe7lnl3xmVCPkmvuTJh9QO2UbxUsUuFMsu7rIQ==
 
 jest-worker@^27.4.1:
   version "27.4.6"

@@ -1,12 +1,12 @@
 import html from './group-box-label.html';
 
 import { prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class GroupBoxLabel extends JaeElement {
+export default class GroupBoxLabel extends FlareElement {
   public constructor() {
     super({
       template,

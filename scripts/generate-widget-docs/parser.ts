@@ -33,10 +33,10 @@ export interface MethodDoc {
   returnType: string;
 }
 
-function isJaeElementDeclaration(node: TSESTree.ExportDeclaration | TSESTree.Expression) {
+function isFlareElementDeclaration(node: TSESTree.ExportDeclaration | TSESTree.Expression) {
   if (node.type == 'ClassDeclaration' &&
     node.superClass && node.superClass.type == 'Identifier' &&
-    node.superClass.name == 'JaeElement') {
+    node.superClass.name == 'FlareElement') {
       return true;
   }
 
@@ -105,10 +105,10 @@ export default class Parser {
       loc: true,
     });
 
-    this.extractJaeElementDeclaration();
+    this.extractFlareElementDeclaration();
 
     if (!this.#classExport) {
-      console.log(chalk.gray('  no JaeElementDeclaration found'));
+      console.log(chalk.gray('  no FlareElementDeclaration found'));
 
       return undefined;
     }
@@ -122,10 +122,10 @@ export default class Parser {
     this.extractMembers();
   };
 
-  protected extractJaeElementDeclaration() {
+  protected extractFlareElementDeclaration() {
     const defaultExport = this.#ast!.body.filter(node => node.type == 'ExportDefaultDeclaration')[0];
 
-    if (defaultExport && defaultExport.type == 'ExportDefaultDeclaration' && isJaeElementDeclaration(defaultExport.declaration)) {
+    if (defaultExport && defaultExport.type == 'ExportDefaultDeclaration' && isFlareElementDeclaration(defaultExport.declaration)) {
       this.#classExport = defaultExport;
 
       const decl = this.#classExport.declaration;

@@ -1,7 +1,7 @@
 import html from './table-column.html';
 
 import { assert } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -11,7 +11,7 @@ template.innerHTML = html;
  */
 const allowResizing = false;
 
-export default class TableColumn extends JaeElement {
+export default class TableColumn extends FlareElement {
   //#region Fields
   #leftSizeGrab: HTMLElement;
   #rightSizeGrab: HTMLElement;

@@ -4,7 +4,7 @@ import TableBody from './table-body';
 import TableHeader from './table-header';
 import TableRow, { SelectEventDetail } from './table-row';
 import { prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -15,28 +15,28 @@ template.innerHTML = html;
  * @example
  *
  * ```html
- * <jae-table>
- *   <jae-table-header>
- *     <jae-table-column>Header 1</jae-table-column>
- *     <jae-table-column>Header 2</jae-table-column>
- *     <jae-table-column>Header 3</jae-table-column>
- *   </jae-table-header>
- *   <jae-table-body>
- *     <jae-table-row>
- *       <jae-table-column>Item 1</jae-table-column>
- *       <jae-table-column>Item 2</jae-table-column>
- *       <jae-table-column>Item 3</jae-table-column>
- *     </jae-table-row>
- *     <jae-table-row>
- *       <jae-table-column>Item 4</jae-table-column>
- *       <jae-table-column>Item 5</jae-table-column>
- *       <jae-table-column>Item 6</jae-table-column>
- *     </jae-table-row>
- *   </jae-table-body>
- * </jae-table>
+ * <flare-table>
+ *   <flare-table-header>
+ *     <flare-table-column>Header 1</flare-table-column>
+ *     <flare-table-column>Header 2</flare-table-column>
+ *     <flare-table-column>Header 3</flare-table-column>
+ *   </flare-table-header>
+ *   <flare-table-body>
+ *     <flare-table-row>
+ *       <flare-table-column>Item 1</flare-table-column>
+ *       <flare-table-column>Item 2</flare-table-column>
+ *       <flare-table-column>Item 3</flare-table-column>
+ *     </flare-table-row>
+ *     <flare-table-row>
+ *       <flare-table-column>Item 4</flare-table-column>
+ *       <flare-table-column>Item 5</flare-table-column>
+ *       <flare-table-column>Item 6</flare-table-column>
+ *     </flare-table-row>
+ *   </flare-table-body>
+ * </flare-table>
  * ```
  */
-export default class Table extends JaeElement {
+export default class Table extends FlareElement {
   //#region Fields
   public get header(): TableHeader | null {
     return this.querySelector<TableHeader>(`${prefix}table-header`);

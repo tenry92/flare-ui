@@ -1,13 +1,13 @@
 import html from './navigation-item.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 import Navigation from './navigation';
 import { prefix } from '../utils';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class NavigationItem extends JaeElement {
+export default class NavigationItem extends FlareElement {
   //#region Fields
   /**
    * @reflectsHtmlAttribute active

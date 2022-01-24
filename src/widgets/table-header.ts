@@ -2,12 +2,12 @@ import html from './table-header.html';
 
 import Table from './table';
 import { prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class TableHeader extends JaeElement {
+export default class TableHeader extends FlareElement {
   //#region Fields
   public get columns(): HTMLCollection {
     return this.children;

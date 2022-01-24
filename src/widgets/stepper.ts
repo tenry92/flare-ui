@@ -1,7 +1,7 @@
 import html from './stepper.html';
 
 import Button from './button';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 import { assert } from '../utils';
 
 const template = document.createElement('template');
@@ -11,7 +11,7 @@ template.innerHTML = html;
  * @emits Event#stepup
  * @emits Event#stepdown
  */
-export default class Stepper extends JaeElement {
+export default class Stepper extends FlareElement {
   //#region Fields
   #upButton: Button;
   #downButton: Button;

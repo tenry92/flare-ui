@@ -1,11 +1,11 @@
 import html from './label.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class Label extends JaeElement {
+export default class Label extends FlareElement {
   public constructor() {
     super({
       template,

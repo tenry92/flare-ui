@@ -1,6 +1,6 @@
 import html from './button.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -14,21 +14,21 @@ template.innerHTML = html;
  * Simple button with text:
  *
  * ```html
- * <jae-button>Button</jae-button>
+ * <flare-button>Button</flare-button>
  * ```
  *
  * @example
  * Primary button:
  *
  * ```html
- * <jae-button primary>Primary Button</jae-button>
+ * <flare-button primary>Primary Button</flare-button>
  * ```
  *
  * @emits Event#activate
  *
  * Dispatched when this element is activated by a mouse click or the keyboard.
  */
-export default class Button extends JaeElement {
+export default class Button extends FlareElement {
   //#region Static Fields
   public get disabled(): boolean {
     return this.hasAttribute('disabled');

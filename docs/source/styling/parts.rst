@@ -12,7 +12,7 @@ label of a checkbox, use a CSS like this:
 
 .. code-block:: css
 
-  jae-checkbox::part(label) {
+  flare-checkbox::part(label) {
     color: red;
   }
 

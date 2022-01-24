@@ -1,11 +1,11 @@
 import html from './tab.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class Tab extends JaeElement {
+export default class Tab extends FlareElement {
   //#region Fields
   /**
    * @reflectsHtmlAttribute active

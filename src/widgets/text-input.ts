@@ -1,7 +1,7 @@
 import html from './text-input.html';
 
 import { animationFrame, assert } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 import FormControl from './form-control';
 
 const template = document.createElement('template');
@@ -27,7 +27,7 @@ export interface Highlight {
   style: Partial<CSSStyleDeclaration>;
 }
 
-export default class TextInput extends JaeElement implements FormControl {
+export default class TextInput extends FlareElement implements FormControl {
   //#region Fields
   /**
    * The actual input element with the `contenteditable` attribute.
@@ -199,7 +199,7 @@ export default class TextInput extends JaeElement implements FormControl {
    * The following example highlights all occurrences of "${...}":
    *
    * ```js
-   * const element = document.querySelector('jae-text-input');
+   * const element = document.querySelector('flare-text-input');
    * const highlights = [];
    *
    * const value = this.$refs.input.value;

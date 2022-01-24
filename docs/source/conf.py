@@ -17,11 +17,11 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Jae UI'
+project = 'Flare UI'
 copyright = '2022, Simon "Tenry" Burchert'
 author = 'Simon "Tenry" Burchert'
-version = '0.1'
-release = '0.1.0'
+version = '0.2'
+release = '0.2.0'
 
 
 # -- General configuration ---------------------------------------------------

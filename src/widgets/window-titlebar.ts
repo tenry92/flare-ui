@@ -1,11 +1,11 @@
 import html from './window-titlebar.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class WindowTitlebar extends JaeElement {
+export default class WindowTitlebar extends FlareElement {
   public constructor() {
     super({
       template,

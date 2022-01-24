@@ -3,7 +3,7 @@ import html from './dropdown.html';
 import FormControl from './form-control';
 import Option from './option';
 import { assert, prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -14,14 +14,14 @@ template.innerHTML = html;
  * @example
  *
  * ```html
- * <jae-dropdown>
- *   <jae-option value="s" selected>Seconds</jae-option>
- *   <jae-option value="m">Minutes</jae-option>
- *   <jae-option value="h">Hours</jae-option>
- * </jae-dropdown>
+ * <flare-dropdown>
+ *   <flare-option value="s" selected>Seconds</flare-option>
+ *   <flare-option value="m">Minutes</flare-option>
+ *   <flare-option value="h">Hours</flare-option>
+ * </flare-dropdown>
  * ```
  */
-export default class Dropdown extends JaeElement implements FormControl {
+export default class Dropdown extends FlareElement implements FormControl {
   //#region Static Fields
   /**
    * Invisible element covering the whole viewport.

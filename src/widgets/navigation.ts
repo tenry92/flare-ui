@@ -1,6 +1,6 @@
 import html from './navigation.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 import NavigationItem from './navigation-item';
 import { prefix } from '../utils';
 
@@ -10,7 +10,7 @@ template.innerHTML = html;
 /**
  * ![Navigation](/_static/generated/widgets/navigation.png)
  */
-export default class Navigation extends JaeElement {
+export default class Navigation extends FlareElement {
   //#region Fields
   /**
    * List of all navigation item elements.

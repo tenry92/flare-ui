@@ -29,7 +29,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'jae-ui.js',
+    filename: 'flare-ui.js',
     path: path.resolve(__dirname, 'dist'),
     library: pkg.config.library,
     libraryTarget: 'window',

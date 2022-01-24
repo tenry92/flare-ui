@@ -3,12 +3,12 @@ import html from './window.html';
 import WindowTitlebar from './window-titlebar';
 import WindowContent from './window-content';
 import { assert, prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class Window extends JaeElement {
+export default class Window extends FlareElement {
   //#region Fields
   #titlebar?: WindowTitlebar;
   #contents?: WindowContent;

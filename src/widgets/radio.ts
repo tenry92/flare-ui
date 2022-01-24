@@ -1,7 +1,7 @@
 import html from './radio.html';
 
 import { prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -12,8 +12,8 @@ template.innerHTML = html;
  * Simple radio buttons with labels:
  *
  * ```html
- * <jae-radio>Option 1</jae-radio>
- * <jae-radio checked>Option 2</jae-radio>
+ * <flare-radio>Option 1</flare-radio>
+ * <flare-radio checked>Option 2</flare-radio>
  * ```
  *
  * @emits Event#change
@@ -24,7 +24,7 @@ template.innerHTML = html;
  * @htmlPart mark The mark (checkmark) within the radio button.
  * @htmlPart label The label part of the widget.
  */
-export default class Radio extends JaeElement {
+export default class Radio extends FlareElement {
   //#region Fields
   /**
    * Whether this checkbox is currently checked.

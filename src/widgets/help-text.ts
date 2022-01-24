@@ -1,11 +1,11 @@
 import html from './help-text.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class HelpText extends JaeElement {
+export default class HelpText extends FlareElement {
   public constructor() {
     super({
       template,

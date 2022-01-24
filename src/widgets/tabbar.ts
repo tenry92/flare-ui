@@ -2,7 +2,7 @@ import html from './tabbar.html';
 
 import Tab from './tab';
 import { prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -10,7 +10,7 @@ template.innerHTML = html;
 /**
  * ![Tabbar](/_static/generated/widgets/tabs.png)
  */
-export default class Tabbar extends JaeElement {
+export default class Tabbar extends FlareElement {
   //#region Fields
   public get tabs(): Tab[] {
     return [...this.children].filter(child => child.matches(`${prefix}tab`)) as Tab[];

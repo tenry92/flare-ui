@@ -1,6 +1,6 @@
 import html from './switch.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -11,15 +11,15 @@ template.innerHTML = html;
  * Toggle switches with labels:
  *
  * ```html
- * <jae-switch>Switch 1</jae-switch>
- * <jae-switch checked>Switch 2</jae-switch>
+ * <flare-switch>Switch 1</flare-switch>
+ * <flare-switch checked>Switch 2</flare-switch>
  * ```
  *
  * @emits Event#change
  *
  * Dispatched when the `checked` value was changed upon user action.
  */
-export default class Switch extends JaeElement {
+export default class Switch extends FlareElement {
   //#region Fields
   /**
    * Whether this switch is currently checked.

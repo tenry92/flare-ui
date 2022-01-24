@@ -1,11 +1,11 @@
 import html from './window-content.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class WindowContent extends JaeElement {
+export default class WindowContent extends FlareElement {
   public constructor() {
     super({
       template,

@@ -1,6 +1,6 @@
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
-export default class Option extends JaeElement {
+export default class Option extends FlareElement {
   //#region Fields
   /**
    * @reflectsHtmlAttribute selected

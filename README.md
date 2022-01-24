@@ -1,9 +1,9 @@
-# Jae UI
+# Flare UI
 
-**Jae UI** is a web based **widget toolkit** using
+**Flare UI** is a web based **widget toolkit** using
 [custom elements](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements).
 
-This toolkit adds additional HTML elements, such as <jae-dropdown> or <jae-group-box>.
+This toolkit adds additional HTML elements, such as <flare-dropdown> or <flare-group-box>.
 
 ## Browser compatibility
 
@@ -15,21 +15,21 @@ Other browsers are probably not or only partly supported.
 
 ## Getting started
 
-In order to get **Jae UI** running, you need the JavaScript that provides the
+In order to get **Flare UI** running, you need the JavaScript that provides the
 custom elements (this repository) and any compatible CSS theme that is made for
-styling `jae-*` elements.
+styling `flare-*` elements.
 
-For the script, you only need a single **jae-ui.js** file, which you can get in
+For the script, you only need a single **flare-ui.js** file, which you can get in
 various ways:
 
 - Download the latest release from GitHub
-- Install via npm: `npm install jae-ui`
-- Install via yarn: `yarn add jae-ui`
-- Clone the repo with `git clone https://github.com/tenry92/jae-ui.git`,
+- Install via npm: `npm install flare-ui`
+- Install via yarn: `yarn add flare-ui`
+- Clone the repo with `git clone https://github.com/tenry92/flare-ui.git`,
   run `npm install` (or `yarn`) and `npm run build` (or `yarn build`)
 
 You will also need to download a compatible theme, such as one from the
-[jae-ui-themes](https://github.com/tenry92/jae-ui-themes) package.
+[flare-ui-themes](https://github.com/tenry92/flare-ui-themes) package.
 
 Now you can link the script and theme files in your HTML and start writing your
 web application:
@@ -39,9 +39,9 @@ web application:
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Welcome Jae UI</title>
-    <script src="dist/jae-ui.js" type="module"></script>
-    <link rel="stylesheet" href="jae-ui-themes/flat/flat.css">
+    <title>Welcome Flare UI</title>
+    <script src="dist/flare-ui.js" type="module"></script>
+    <link rel="stylesheet" href="flare-ui-themes/flat/flat.css">
   </head>
   <body>
     ...
@@ -53,4 +53,4 @@ In the docs you will find a list of each available widget and their options.
 
 ## License
 
-Jae UI is licensed under the MIT License.
+Flare UI is licensed under the MIT License.

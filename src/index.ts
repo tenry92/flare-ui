@@ -2,7 +2,7 @@ import { prefix } from './utils';
 
 export { version } from './utils';
 
-export { default as Element } from './jae-element';
+export { default as Element } from './flare-element';
 
 import Button from './widgets/button';
 export { default as Button } from './widgets/button';

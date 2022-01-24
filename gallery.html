@@ -3,152 +3,152 @@
   <head>
     <meta charset="utf-8">
     <title>Widget Gallery</title>
-    <script src="dist/jae-ui.js" type="module"></script>
-    <link rel="stylesheet" href="node_modules/jae-ui-themes/dist/flat/flat.css">
+    <script src="dist/flare-ui.js" type="module"></script>
+    <link rel="stylesheet" href="node_modules/flare-ui-themes/dist/flat/flat.css">
   </head>
   <body>
     <div id="app" style="margin: 8px; padding: 8px;">
-      <jae-layout horizontal>
-        <jae-layout style="width: 400px;" vertical>
-          <jae-group-box>
-            <jae-group-box-label>Button</jae-group-box-label>
-            <jae-layout vertical data-capture="button">
-              <jae-layout horizontal>
-                <jae-button>Button</jae-button>
-                <jae-button primary>Primary Button</jae-button>
-              </jae-layout>
-              <jae-layout horizontal>
-                <jae-button disabled>Button</jae-button>
-                <jae-button disabled primary>Primary Button</jae-button>
-              </jae-layout>
-            </jae-layout>
-          </jae-group-box>
+      <flare-layout horizontal>
+        <flare-layout style="width: 400px;" vertical>
+          <flare-group-box>
+            <flare-group-box-label>Button</flare-group-box-label>
+            <flare-layout vertical data-capture="button">
+              <flare-layout horizontal>
+                <flare-button>Button</flare-button>
+                <flare-button primary>Primary Button</flare-button>
+              </flare-layout>
+              <flare-layout horizontal>
+                <flare-button disabled>Button</flare-button>
+                <flare-button disabled primary>Primary Button</flare-button>
+              </flare-layout>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Checkbox</jae-group-box-label>
-            <jae-layout vertical>
-              <jae-layout vertical data-capture="checkbox">
-                <jae-checkbox>Checkbox</jae-checkbox>
-                <jae-checkbox checked>Checkbox</jae-checkbox>
-              </jae-layout>
-              <jae-layout vertical data-capture="radio">
-                <jae-radio>Option 1</jae-radio>
-                <jae-radio checked>Option 2</jae-radio>
-              </jae-layout>
-            </jae-layout>
-          </jae-group-box>
+          <flare-group-box>
+            <flare-group-box-label>Checkbox</flare-group-box-label>
+            <flare-layout vertical>
+              <flare-layout vertical data-capture="checkbox">
+                <flare-checkbox>Checkbox</flare-checkbox>
+                <flare-checkbox checked>Checkbox</flare-checkbox>
+              </flare-layout>
+              <flare-layout vertical data-capture="radio">
+                <flare-radio>Option 1</flare-radio>
+                <flare-radio checked>Option 2</flare-radio>
+              </flare-layout>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Switch</jae-group-box-label>
-            <jae-layout vertical data-capture="switch">
-              <jae-switch>Switch</jae-switch>
-              <jae-switch checked>Switch</jae-switch>
-            </jae-layout>
-          </jae-group-box>
+          <flare-group-box>
+            <flare-group-box-label>Switch</flare-group-box-label>
+            <flare-layout vertical data-capture="switch">
+              <flare-switch>Switch</flare-switch>
+              <flare-switch checked>Switch</flare-switch>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Dropdown</jae-group-box-label>
-            <jae-layout vertical data-capture="dropdown">
-              <jae-dropdown>
-                <jae-option value="red" selected>Red</jae-option>
-                <jae-option value="green" selected>Green</jae-option>
-                <jae-option value="blue" selected>Blue</jae-option>
-                <jae-option value="yellow" selected>Yellow</jae-option>
-              </jae-dropdown>
-            </jae-layout>
-          </jae-group-box>
+          <flare-group-box>
+            <flare-group-box-label>Dropdown</flare-group-box-label>
+            <flare-layout vertical data-capture="dropdown">
+              <flare-dropdown>
+                <flare-option value="red" selected>Red</flare-option>
+                <flare-option value="green" selected>Green</flare-option>
+                <flare-option value="blue" selected>Blue</flare-option>
+                <flare-option value="yellow" selected>Yellow</flare-option>
+              </flare-dropdown>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Input</jae-group-box-label>
-            <jae-layout vertical>
-              <jae-layout horizontal>
-                <jae-text-input placeholder="Placeholder"></jae-text-input>
-                <jae-text-input value="Text"></jae-text-input>
-              </jae-layout>
-              <jae-text-input multiline placeholder="Multiline"></jae-text-input>
-              <jae-text-input multiline value="First line&#10;Second line"></jae-text-input>
-              <jae-layout horizontal>
-                <jae-number-input placeholder="number"></jae-number-input>
-                <jae-number-input value="42"></jae-number-input>
-              </jae-layout>
-            </jae-layout>
-          </jae-group-box>
-        </jae-layout>
+          <flare-group-box>
+            <flare-group-box-label>Input</flare-group-box-label>
+            <flare-layout vertical>
+              <flare-layout horizontal>
+                <flare-text-input placeholder="Placeholder"></flare-text-input>
+                <flare-text-input value="Text"></flare-text-input>
+              </flare-layout>
+              <flare-text-input multiline placeholder="Multiline"></flare-text-input>
+              <flare-text-input multiline value="First line&#10;Second line"></flare-text-input>
+              <flare-layout horizontal>
+                <flare-number-input placeholder="number"></flare-number-input>
+                <flare-number-input value="42"></flare-number-input>
+              </flare-layout>
+            </flare-layout>
+          </flare-group-box>
+        </flare-layout>
 
-        <jae-layout style="width: 400px;" vertical>
-          <jae-group-box>
-            <jae-group-box-label>Label and Help</jae-group-box-label>
-            <jae-layout vertical>
-              <jae-layout horizontal form>
-                <jae-label>Name</jae-label>
-                <jae-text-input></jae-text-input>
+        <flare-layout style="width: 400px;" vertical>
+          <flare-group-box>
+            <flare-group-box-label>Label and Help</flare-group-box-label>
+            <flare-layout vertical>
+              <flare-layout horizontal form>
+                <flare-label>Name</flare-label>
+                <flare-text-input></flare-text-input>
 
-                <jae-label>Permission</jae-label>
-                <jae-dropdown>
-                  <jae-option value="everybody" selected>Everybody</jae-option>
-                </jae-dropdown>
-                <jae-help-text>Who may use this?</jae-help-text>
-              </jae-layout>
-            </jae-layout>
-          </jae-group-box>
+                <flare-label>Permission</flare-label>
+                <flare-dropdown>
+                  <flare-option value="everybody" selected>Everybody</flare-option>
+                </flare-dropdown>
+                <flare-help-text>Who may use this?</flare-help-text>
+              </flare-layout>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Table</jae-group-box-label>
-            <jae-layout vertical>
-              <jae-table data-capture="table">
-                <jae-table-header>
-                  <jae-table-column>Header 1</jae-table-column>
-                  <jae-table-column>Header 2</jae-table-column>
-                  <jae-table-column>Header 3</jae-table-column>
-                </jae-table-header>
-                <jae-table-body>
-                  <jae-table-row>
-                    <jae-table-column>Item 1</jae-table-column>
-                    <jae-table-column>Item 2</jae-table-column>
-                    <jae-table-column>Item 3</jae-table-column>
-                  </jae-table-row>
-                  <jae-table-row>
-                    <jae-table-column>Item 4</jae-table-column>
-                    <jae-table-column>Item 5</jae-table-column>
-                    <jae-table-column>Item 6</jae-table-column>
-                  </jae-table-row>
-                </jae-table-body>
-              </jae-table>
-            </jae-layout>
-          </jae-group-box>
+          <flare-group-box>
+            <flare-group-box-label>Table</flare-group-box-label>
+            <flare-layout vertical>
+              <flare-table data-capture="table">
+                <flare-table-header>
+                  <flare-table-column>Header 1</flare-table-column>
+                  <flare-table-column>Header 2</flare-table-column>
+                  <flare-table-column>Header 3</flare-table-column>
+                </flare-table-header>
+                <flare-table-body>
+                  <flare-table-row>
+                    <flare-table-column>Item 1</flare-table-column>
+                    <flare-table-column>Item 2</flare-table-column>
+                    <flare-table-column>Item 3</flare-table-column>
+                  </flare-table-row>
+                  <flare-table-row>
+                    <flare-table-column>Item 4</flare-table-column>
+                    <flare-table-column>Item 5</flare-table-column>
+                    <flare-table-column>Item 6</flare-table-column>
+                  </flare-table-row>
+                </flare-table-body>
+              </flare-table>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Tabs</jae-group-box-label>
-            <jae-layout vertical data-capture="tabs">
-              <jae-tabview>
-                <jae-tabbar>
-                  <jae-tab active>Tab 1</jae-tab>
-                  <jae-tab>Tab 2</jae-tab>
-                  <jae-tab>Tab 3</jae-tab>
-                </jae-tabbar>
-                <jae-layout vertical>
-                  <jae-checkbox checked>Option 1</jae-checkbox>
-                  <jae-checkbox>Option 2</jae-checkbox>
-                  <jae-checkbox>Option 3</jae-checkbox>
-                </jae-layout>
-              </jae-tabview>
-            </jae-layout>
-          </jae-group-box>
+          <flare-group-box>
+            <flare-group-box-label>Tabs</flare-group-box-label>
+            <flare-layout vertical data-capture="tabs">
+              <flare-tabview>
+                <flare-tabbar>
+                  <flare-tab active>Tab 1</flare-tab>
+                  <flare-tab>Tab 2</flare-tab>
+                  <flare-tab>Tab 3</flare-tab>
+                </flare-tabbar>
+                <flare-layout vertical>
+                  <flare-checkbox checked>Option 1</flare-checkbox>
+                  <flare-checkbox>Option 2</flare-checkbox>
+                  <flare-checkbox>Option 3</flare-checkbox>
+                </flare-layout>
+              </flare-tabview>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Navigation</jae-group-box-label>
-            <jae-layout vertical data-capture="navigation">
-              <jae-navigation>
-                <jae-navigation-item active>Home</jae-navigation-item>
-                <jae-navigation-item>Database</jae-navigation-item>
-                <jae-navigation-item>Settings</jae-navigation-item>
-                <jae-navigation-item>About</jae-navigation-item>
-              </jae-navigation>
-            </jae-layout>
-          </jae-group-box>
+          <flare-group-box>
+            <flare-group-box-label>Navigation</flare-group-box-label>
+            <flare-layout vertical data-capture="navigation">
+              <flare-navigation>
+                <flare-navigation-item active>Home</flare-navigation-item>
+                <flare-navigation-item>Database</flare-navigation-item>
+                <flare-navigation-item>Settings</flare-navigation-item>
+                <flare-navigation-item>About</flare-navigation-item>
+              </flare-navigation>
+            </flare-layout>
+          </flare-group-box>
 
-          <jae-group-box>
-            <jae-group-box-label>Palette</jae-group-box-label>
+          <flare-group-box>
+            <flare-group-box-label>Palette</flare-group-box-label>
             <div style="display: grid; grid-template-columns: 1fr 1fr;">
               <div style="padding: 8px; background: var(--background-color); color: var(--on-background-color);">Background</div>
               <div style="padding: 8px; background: var(--on-background-color); color: var(--background-color);">On Background</div>
@@ -173,9 +173,9 @@
               <div style="padding: 8px; background: var(--error-color); color: var(--on-error-color);">Error</div>
               <div style="padding: 8px; background: var(--on-error-color); color: var(--error-color);">On Error</div>
             </div>
-          </jae-group-box>
-        </jae-layout>
-      </jae-layout>
+          </flare-group-box>
+        </flare-layout>
+      </flare-layout>
     </div>
   </body>
 </html>

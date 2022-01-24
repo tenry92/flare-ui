@@ -3,12 +3,12 @@ import html from './table-body.html';
 import TableRow from './table-row';
 import Table from './table';
 import { prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class TableBody extends JaeElement {
+export default class TableBody extends FlareElement {
   //#region Fields
   public get columnCount(): number {
     let count = 0;

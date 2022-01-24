@@ -4,12 +4,12 @@ import TextInput from './text-input';
 import Stepper from './stepper';
 import FormControl from './form-control';
 import { assert, prefix } from '../utils';
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
 
-export default class NumberInput extends JaeElement implements FormControl {
+export default class NumberInput extends FlareElement implements FormControl {
   //#region Fields
   #textInput: TextInput;
   #stepper: Stepper;

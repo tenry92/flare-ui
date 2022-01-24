@@ -1,6 +1,6 @@
 import html from './checkbox.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -11,8 +11,8 @@ template.innerHTML = html;
  * Simple checkboxes with labels:
  *
  * ```html
- * <jae-checkbox>Checkbox 1</jae-checkbox>
- * <jae-checkbox checked>Checkbox 2</jae-checkbox>
+ * <flare-checkbox>Checkbox 1</flare-checkbox>
+ * <flare-checkbox checked>Checkbox 2</flare-checkbox>
  * ```
  *
  * @emits Event#change
@@ -23,7 +23,7 @@ template.innerHTML = html;
  * @htmlPart mark The checkmark within the checkbox.
  * @htmlPart label The label part of the widget.
  */
-export default class Checkbox extends JaeElement {
+export default class Checkbox extends FlareElement {
   //#region Fields
   /**
    * Whether this checkbox is currently checked.

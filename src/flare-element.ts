@@ -34,9 +34,9 @@ export interface ElementOptions {
 }
 
 /**
- * Base class for any custom Jae element.
+ * Base class for any custom Flare element.
  */
-export default class JaeElement extends HTMLElement {
+export default class FlareElement extends HTMLElement {
   //#region Fields
   #elementOptions: ElementOptions;
   #internals: ElementInternals;

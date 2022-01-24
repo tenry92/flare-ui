@@ -1,11 +1,11 @@
-Jae UI
-======
+Flare UI
+========
 
-**Jae UI** is a web based **widget toolkit** using
+**Flare UI** is a web based **widget toolkit** using
 `custom elements <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements>`_.
 
-This toolkit adds additional HTML elements you can use, such as ``<jae-dropdown>``
-or ``<jae-group-box>``.
+This toolkit adds additional HTML elements you can use, such as ``<flare-dropdown>``
+or ``<flare-group-box>``.
 
 Browser compatibility
 ---------------------

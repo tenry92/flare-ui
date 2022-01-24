@@ -1,6 +1,6 @@
 import html from './table-row.html';
 
-import JaeElement from '../jae-element';
+import FlareElement from '../flare-element';
 
 const template = document.createElement('template');
 template.innerHTML = html;
@@ -10,7 +10,7 @@ export interface SelectEventDetail {
   range: boolean; // if shift is pressed; focus does not change
 }
 
-export default class TableRow extends JaeElement {
+export default class TableRow extends FlareElement {
   //#region Fields
   public get columns(): HTMLCollection {
     return this.children;
