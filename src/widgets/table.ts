@@ -35,6 +35,10 @@ template.innerHTML = html;
  *   </flare-table-body>
  * </flare-table>
  * ```
+ *
+ * @emits Event#selectionchanged
+ *
+ * Dispatched when the selection of rows changed.
  */
 export default class Table extends FlareElement {
   //#region Fields
