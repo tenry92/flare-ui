@@ -28,6 +28,14 @@ export interface ElementOptions {
   activatable: boolean;
 
   /**
+   * Whether this element requires a double click for activation rather than a
+   * single click.
+   *
+   * @defaultValue `false`
+   */
+  activateWithDoubleClick: boolean;
+
+  /**
    * @defaultValue `false`
    */
   delegatesFocus: boolean;
@@ -49,6 +57,7 @@ export default class FlareElement extends HTMLElement {
       template: undefined,
       interactive: false,
       activatable: true,
+      activateWithDoubleClick: false,
       delegatesFocus: false,
     }, elementOptions);
 
@@ -152,11 +161,17 @@ export default class FlareElement extends HTMLElement {
         }, {once: true});
       });
 
-      this.addEventListener('mouseup', () => {
-        if (mouseDown) {
+      if (this.#elementOptions.activateWithDoubleClick) {
+        this.addEventListener('dblclick', () => {
           this.emitActivateEvent();
-        }
-      });
+        });
+      } else {
+        this.addEventListener('mouseup', () => {
+          if (mouseDown) {
+            this.emitActivateEvent();
+          }
+        });
+      }
 
       if (this.#elementOptions.activatable) {
         // Space down: pressed

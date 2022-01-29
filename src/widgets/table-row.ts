@@ -44,6 +44,9 @@ export default class TableRow extends FlareElement {
   public constructor() {
     super({
       template,
+      interactive: true,
+      activatable: true,
+      activateWithDoubleClick: true,
     });
 
     this.addEventListener('click', clickEvent => {
@@ -60,11 +63,6 @@ export default class TableRow extends FlareElement {
       });
 
       this.dispatchEvent(selectEvent);
-    });
-
-    // todo: also on enter (if focused)
-    this.addEventListener('dblclick', () => {
-      console.log('activate');
     });
   }
 }

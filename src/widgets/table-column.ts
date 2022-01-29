@@ -20,6 +20,7 @@ export default class TableColumn extends FlareElement {
   public constructor() {
     super({
       template,
+      interactive: true,
     });
 
     this.#leftSizeGrab = assert(this.shadowRoot?.querySelector('.size-grab:first-of-type'), HTMLElement);
