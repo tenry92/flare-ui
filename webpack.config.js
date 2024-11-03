@@ -23,6 +23,26 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: true,
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset',
+        generator: {
+          filename: 'assets/[name][ext][query]',
+        },
+      },
     ],
   },
   resolve: {

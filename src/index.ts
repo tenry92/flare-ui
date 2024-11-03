@@ -1,3 +1,5 @@
+import './themes/default/index.scss';
+
 import { prefix } from './utils';
 
 export { version } from './utils';
@@ -99,3 +101,15 @@ customElements.define(`${prefix}tabview`, Tabview);
 import TextInput from './widgets/text-input';
 export { default as TextInput } from './widgets/text-input';
 customElements.define(`${prefix}text-input`, TextInput);
+
+import WindowContent from './widgets/window-content';
+export { default as WindowContent } from './widgets/window-content';
+customElements.define(`${prefix}window-content`, WindowContent);
+
+import WindowTitlebar from './widgets/window-titlebar';
+export { default as WindowTitlebar } from './widgets/window-titlebar';
+customElements.define(`${prefix}window-titlebar`, WindowTitlebar);
+
+import Window from './widgets/window';
+export { default as Window } from './widgets/window';
+customElements.define(`${prefix}window`, Window);

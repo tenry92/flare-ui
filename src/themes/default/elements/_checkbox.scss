@@ -1,0 +1,116 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}checkbox, #{utils.$prefix}radio, #{utils.$prefix}switch {
+  --size: 20px;
+
+  @include style.font();
+
+  &::part(label) {
+    margin-left: style.$space-content;
+  }
+
+  --color: var(--surface-color);
+
+  &:hover {
+    --color: var(--surface-color-hover);
+  }
+
+  &:active {
+    --color: var(--surface-color-pressed);
+  }
+
+  &:focus {
+    @include style.focus();
+  }
+
+  &::part(checkbox), &::part(button) {
+    border: 2px solid var(--color);
+
+    width: var(--size);
+    height: var(--size);
+  }
+
+  &::part(mark) {
+    background: var(--color);
+  }
+
+  &[checked] {
+    --color: var(--primary-color);
+
+    &:hover {
+      --color: var(--primary-color-hover);
+    }
+
+    &:active {
+      --color: var(--primary-color-pressed);
+    }
+  }
+}
+
+// individual shapes
+#{utils.$prefix}checkbox::part(checkbox) {
+  @include style.border-radius($context: "checkbox");
+  overflow: hidden;
+}
+
+#{utils.$prefix}checkbox[disabled] {
+  opacity: 0.5;
+}
+
+#{utils.$prefix}radio::part(button) {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+// individual marks
+#{utils.$prefix}checkbox::part(mark) {
+  -webkit-mask-image: url("checkmark.svg"), linear-gradient(#fff 0 0);
+  mask-image: url("checkmark.svg");
+
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+
+  -webkit-mask-size: contain;
+  mask-size: contain;
+
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}
+
+#{utils.$prefix}radio::part(mark) {
+  background: var(--color);
+}
+
+#{utils.$prefix}radio[disabled] {
+  opacity: 0.5;
+}
+
+#{utils.$prefix}switch::part(track) {
+  padding: 12px;
+  width: 48px;
+
+  height: var(--size);
+  border: 2px solid var(--color);
+
+  background-color: var(--color);
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+}
+
+#{utils.$prefix}switch::part(handle) {
+  transition: transform 0.2s, background-color 0.2s;
+  height: var(--size);
+
+  transform: translate(calc(-100% + var(--size) / 2));
+  background-color: var(--on-surface-color);
+
+  @include utils.base-element("[checked]") {
+    transform: translate(calc(100% - var(--size) / 2));
+    background-color: var(--on-primary-color);
+  }
+}
+
+#{utils.$prefix}switch[disabled] {
+  opacity: 0.5;
+}

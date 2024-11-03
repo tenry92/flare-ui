@@ -29,7 +29,7 @@ template.innerHTML = html;
  * Dispatched when this element is activated by a mouse click or the keyboard.
  */
 export default class Button extends FlareElement {
-  //#region Static Fields
+  //#region Fields
   public get disabled(): boolean {
     return this.hasAttribute('disabled');
   }

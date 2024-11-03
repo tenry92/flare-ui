@@ -1,0 +1,22 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}dropdown::part(button) {
+  border-radius: 0px;
+  width: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: url("caret.svg");
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    align-self: center;
+  }
+}
+
+#{utils.$prefix}dropdown[disabled] {
+  opacity: 0.5;
+}

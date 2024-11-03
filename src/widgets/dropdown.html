@@ -36,15 +36,15 @@
     z-index: 1;
   }
 
-  :host(:not(:--open)) [part~="menu"] {
+  :host(:not(:state(open))) [part~="menu"] {
     display: none;
   }
 
-  :host(:--dropdown) [part~="menu"] {
+  :host(:state(dropdown)) [part~="menu"] {
     top: 100%;
   }
 
-  :host(:--dropup) [part~="menu"] {
+  :host(:state(dropup)) [part~="menu"] {
     transform: translateY(-100%);
   }
 </style>

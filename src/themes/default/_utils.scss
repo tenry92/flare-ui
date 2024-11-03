@@ -1,0 +1,37 @@
+@use "sass:selector";
+@use "sass:string";
+
+$prefix: flare-;
+
+@function to-string($list) {
+  $result: null;
+
+  @each $item in $list {
+    @if $result == null {
+      $result: $item;
+    } @else {
+      $result: $result + " " + $item;
+    }
+  }
+
+  @return $result;
+}
+
+@mixin base-element($extension) {
+  @each $selector in selector.parse(&) {
+    $string: to-string($selector);
+
+    $index: string.index($string, "::");
+
+    @if $index != null {
+      @at-root #{string.insert($string, $extension, $index)} {
+        @content;
+      }
+
+    } @else {
+      @at-root #{$string + $extension} {
+        @content;
+      }
+    }
+  }
+}

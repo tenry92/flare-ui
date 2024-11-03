@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Flare UI'
-copyright = '2022, Simon "Tenry" Burchert'
+copyright = '2024, Simon "Tenry" Burchert'
 author = 'Simon "Tenry" Burchert'
 version = '0.2'
 release = '0.2.0'

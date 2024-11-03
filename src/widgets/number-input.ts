@@ -16,6 +16,18 @@ export default class NumberInput extends FlareElement implements FormControl {
 
   #lastNumberValue = 0;
 
+  public get disabled(): boolean {
+    return this.hasAttribute('disabled');
+  }
+
+  public set disabled(value: boolean) {
+    if (value) {
+      this.setAttribute('disabled', 'disabled');
+    } else {
+      this.removeAttribute('disabled');
+    }
+  }
+
   /**
    * @initsFromHtmlAttribute value
    */

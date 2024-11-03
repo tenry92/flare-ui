@@ -1,0 +1,73 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}dropdown::part(menu) {
+  background: var(--surface-color);
+  margin: 8px 0;
+}
+
+#{utils.$prefix}dropdown > #{utils.$prefix}option {
+  background: var(--surface-color);
+  color: var(--on-surface-color);
+  padding: style.$input-padding;
+
+  &:focus {
+    background: var(--primary-color-hover);
+    color: var(--on-primary-color-hover);
+    outline: none;
+  }
+}
+
+#{utils.$prefix}table {
+  @include style.border-radius("container");
+  border: 2px solid var(--surface-color);
+  background: var(--background-color);
+}
+
+#{utils.$prefix}table-column {
+  @include style.font();
+  padding: style.$button-padding;
+}
+
+#{utils.$prefix}table-header {
+  background: var(--surface-color);
+  color: var(--on-surface-color);
+
+  & > #{utils.$prefix}table-column {
+    @include style.font($weight: "bold");
+  }
+}
+
+#{utils.$prefix}table-row {
+  & > #{utils.$prefix}table-column {
+    background: var(--background-color);
+    color: var(--on-background-color);
+  }
+
+  &:hover > #{utils.$prefix}table-column {
+    background: var(--background-color-hover);
+    color: var(--on-background-color-hover);
+  }
+
+  &:active > #{utils.$prefix}table-column {
+    background: var(--background-color-pressed);
+    color: var(--on-background-color-pressed);
+  }
+}
+
+#{utils.$prefix}table-row[selected] {
+  & > #{utils.$prefix}table-column {
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+  }
+
+  &:hover > #{utils.$prefix}table-column {
+    background: var(--primary-color-hover);
+    color: var(--on-primary-color-hover);
+  }
+
+  &:active > #{utils.$prefix}table-column {
+    background: var(--primary-color-pressed);
+    color: var(--on-primary-color-pressed);
+  }
+}

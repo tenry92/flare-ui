@@ -43,6 +43,18 @@ export default class Radio extends FlareElement {
     }
   }
 
+  public get disabled(): boolean {
+    return this.hasAttribute('disabled');
+  }
+
+  public set disabled(value: boolean) {
+    if (value) {
+      this.setAttribute('disabled', 'disabled');
+    } else {
+      this.removeAttribute('disabled');
+    }
+  }
+
   public get optionGroup(): Radio[] {
     if (this.parentElement) {
       return [...this.parentElement.querySelectorAll<Radio>(`:scope > ${prefix}radio`)];

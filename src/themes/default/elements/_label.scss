@@ -1,0 +1,25 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}checkbox::part(label), #{utils.$prefix}radio::part(label), #{utils.$prefix}switch::part(label), #{utils.$prefix}group-box-label, #{utils.$prefix}label, #{utils.$prefix}help-text {
+  @include style.font();
+
+  color: var(--on-background-color);
+}
+
+#{utils.$prefix}group-box-label {
+  display: inline-block;
+
+  position: absolute;
+  transform: translateY(-50%);
+
+  @include style.font($weight: "bold");
+
+  background: var(--background-color);
+  padding: 0 style.$space-content;
+  margin: 0 style.$space-content;
+}
+
+#{utils.$prefix}help-text {
+  @include style.font($size: "small");
+}

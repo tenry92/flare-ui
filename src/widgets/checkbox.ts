@@ -41,6 +41,18 @@ export default class Checkbox extends FlareElement {
       this.removeAttribute('checked');
     }
   }
+
+  public get disabled(): boolean {
+    return this.hasAttribute('disabled');
+  }
+
+  public set disabled(value: boolean) {
+    if (value) {
+      this.setAttribute('disabled', 'disabled');
+    } else {
+      this.removeAttribute('disabled');
+    }
+  }
   //#endregion
 
   public constructor() {
@@ -51,6 +63,9 @@ export default class Checkbox extends FlareElement {
 
     this.addEventListener('activate', () => {
       this.toggle();
+
+      const inputEvent = new Event('input');
+      this.dispatchEvent(inputEvent);
 
       const changeEvent = new Event('change');
       this.dispatchEvent(changeEvent);

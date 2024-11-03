@@ -1,0 +1,49 @@
+@use "sass:map";
+@use "sass:color";
+
+$colors: (
+  "background": #40434e,
+  "text": #f2f7f2,
+  "accent": hsl(220deg, 80%, 75%),
+);
+
+@mixin set-css-color-vars($name, $color) {
+  --#{$name}-h: #{color.channel($color, "hue", $space: hsl)};
+  --#{$name}-s: #{color.channel($color, "saturation", $space: hsl)};
+  --#{$name}-l: #{color.channel($color, "lightness", $space: hsl)};
+  --#{$name}: hsl(var(--#{$name}-h), var(--#{$name}-s), var(--#{$name}-l));
+
+  --#{$name}-hover: hsl(var(--#{$name}-h), var(--#{$name}-s), calc(var(--#{$name}-l) + 5%));
+  --#{$name}-pressed: hsl(var(--#{$name}-h), calc(var(--#{$name}-s) - 10%), calc(var(--#{$name}-l) - 10%));
+}
+
+:root {
+  @include set-css-color-vars("background-color", map.get($colors, "background"));
+  @include set-css-color-vars("on-background-color", map.get($colors, "text"));
+
+  @include set-css-color-vars("primary-color", map.get($colors, "accent"));
+  @include set-css-color-vars("on-primary-color", map.get($colors, "text"));
+
+  @include set-css-color-vars("surface-color", #818181);
+  @include set-css-color-vars("on-surface-color", map.get($colors, "text"));
+
+  @include set-css-color-vars("success-color", #38a34a);
+  @include set-css-color-vars("on-success-color", map.get($colors, "text"));
+
+  @include set-css-color-vars("info-color", #387ca3);
+  @include set-css-color-vars("on-info-color", map.get($colors, "text"));
+
+  @include set-css-color-vars("warn-color", #a39c38);
+  @include set-css-color-vars("on-warn-color", map.get($colors, "text"));
+
+  @include set-css-color-vars("error-color", #a33838);
+  @include set-css-color-vars("on-error-color", map.get($colors, "text"));
+}
+
+flare-icon {
+  // -webkit-mask-image: url("icon.svg"), linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-in;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+}

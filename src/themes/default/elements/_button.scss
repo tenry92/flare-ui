@@ -1,0 +1,119 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}button, #{utils.$prefix}tab {
+  padding: style.$button-padding;
+}
+
+#{utils.$prefix}button, #{utils.$prefix}number-input::part(button) {
+  @include style.font();
+
+  @include style.border-radius;
+
+  @include utils.base-element(":not([primary])") {
+    color: var(--on-surface-color);
+
+    @include style.shape(var(--surface-color));
+
+    &:hover {
+      @include style.shape(var(--surface-color-hover));
+    }
+
+    &:--pressed {
+      @include style.shape(var(--surface-color-pressed));
+    }
+  }
+
+  @include utils.base-element("[primary]") {
+    color: var(--on-primary-color);
+
+    @include style.shape(var(--primary-color));
+
+    &:hover {
+      @include style.shape(var(--primary-color-hover));
+    }
+
+    &:--pressed {
+      @include style.shape(var(--primary-color-pressed));
+    }
+  }
+}
+
+#{utils.$prefix}dropdown::part(button) {
+  @include style.font();
+
+  @include style.border-radius;
+
+  @include utils.base-element(":not([primary])") {
+    color: var(--on-surface-color);
+
+    @include style.shape(var(--surface-color));
+
+    @include utils.base-element(":hover") {
+      @include style.shape(var(--surface-color-hover));
+    }
+
+    @include utils.base-element(":--pressed") {
+      @include style.shape(var(--surface-color-pressed));
+    }
+  }
+}
+
+#{utils.$prefix}button[disabled] {
+  opacity: 0.5;
+}
+
+#{utils.$prefix}button:focus {
+  @include style.focus();
+}
+
+#{utils.$prefix}stepper::part(button), #{utils.$prefix}number-input::part(button) {
+  padding: 0px 4px;
+}
+
+#{utils.$prefix}stepper::part(up), #{utils.$prefix}number-input::part(up) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#{utils.$prefix}stepper::part(down), #{utils.$prefix}number-input::part(down) {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#{utils.$prefix}tab {
+  @include style.font();
+
+  @include style.border-radius;
+
+  border: 2px solid var(--surface-color);
+  border-bottom-color: transparent;
+  color: var(--on-surface-color);
+
+  margin-top: style.$tab-lift;
+  margin-right: -2px;
+  padding-bottom: 4px;
+
+  &:not([active]) {
+    &:hover {
+      border-color: var(--surface-color-hover);
+      border-bottom-color: transparent;
+      color: var(--on-surface-color-hover);
+    }
+
+    &:--pressed {
+      border-color: var(--surface-color-pressed);
+      border-bottom-color: transparent;
+      color: var(--on-surface-color-pressed);
+    }
+  }
+
+  &[active] {
+    margin-top: 0px;
+    padding-bottom: 4px + style.$tab-lift;
+
+    background: var(--surface-color);
+    color: var(--on-surface-color);
+    // border-bottom-color: transparent;
+  }
+}

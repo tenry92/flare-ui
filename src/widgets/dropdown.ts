@@ -66,7 +66,7 @@ export default class Dropdown extends FlareElement implements FormControl {
    * Whether the menu is currently open.
    */
   public get open(): boolean {
-    return this.hasState('--open');
+    return this.hasState('open');
   }
 
   public set open(value: boolean) {
@@ -75,7 +75,7 @@ export default class Dropdown extends FlareElement implements FormControl {
     }
 
     if (value) {
-      this.addState('--open');
+      this.addState('open');
 
       const rect = this.getBoundingClientRect();
       const spaceAbove = rect.top;
@@ -83,13 +83,13 @@ export default class Dropdown extends FlareElement implements FormControl {
       const popupRect = this.#menu.getBoundingClientRect();
 
       if (popupRect.height + 20 < spaceBelow) {
-        this.addState('--dropdown');
-        this.deleteState('--dropup');
+        this.addState('dropdown');
+        this.deleteState('dropup');
 
         this.#menu.style.maxHeight = `${spaceBelow - 20}px`;
       } else {
-        this.addState('--dropup');
-        this.deleteState('--dropdown');
+        this.addState('dropup');
+        this.deleteState('dropdown');
 
         this.#menu.style.maxHeight = `${spaceAbove - 20}px`;
       }
@@ -173,7 +173,7 @@ export default class Dropdown extends FlareElement implements FormControl {
         this.focus();
       }
 
-      this.deleteState('--open');
+      this.deleteState('open');
     }
   }
 

@@ -1,0 +1,139 @@
+@use "sass:map";
+
+////////////////////////////////////////////////////////////////////////////////
+// SETTINGS
+
+// none (0px), xs (3px), sm (6px), full (aka pill, 9999px)
+$border-radius: "xs";
+
+// flat, 3d, plastic, glossy (other than "fla" is currently experimental)
+$shape: "flat";
+
+// make sizes and spaces smaller (experimental)
+$compact: false;
+
+////////////////////////////////////////////////////////////////////////////////
+// VARIABLES
+
+$space-content: 16px;
+$input-padding: 8px;
+$button-padding: $input-padding 16px;
+$tab-lift: 4px;
+
+@if $compact {
+  $space-content: 8px;
+  $input-padding: 2px;
+  $button-padding: $input-padding 12px;
+  $tab-lift: 2px;
+}
+
+// https://www.pollen.style/modules/typography#modular-scale
+$font-sizes: (
+  "tiny": 12px,
+  "small": 14px,
+  "normal": 16px,
+  "large": 20px,
+);
+
+$font-sizes-compact: (
+  "tiny": 9px,
+  "small": 10px,
+  "normal": 11px,
+  "large": 11px,
+);
+
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+
+////////////////////////////////////////////////////////////////////////////////
+// MIXINS
+
+// element or container
+@mixin border-radius($context: "element") {
+  @if $border-radius == "xs" {
+    border-radius: 3px;
+  } @else if $border-radius == "sm" {
+    border-radius: 6px;
+  } @else if $border-radius == "full" {
+    @if $context == "element" {
+      border-radius: 9999px;
+    } @else if $context == "checkbox" {
+      border-radius: 6px;
+    } @else {
+      border-radius: 12px;
+    }
+  } @else {
+    border-radius: 0px;
+  }
+}
+
+@mixin focus() {
+  // outline: none;
+  // box-shadow: 0px 0px 6px var(--accent-color);
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@mixin shape($color: gray) {
+  @if $shape == "outline" {
+    background: none;
+    border: 2px solid $color;
+  } @else if $shape == "flat" {
+    background: $color;
+    border: none;
+  } @else if $shape == "3d" {
+    // sharp 3d borders
+    background: $color;
+    border: none;
+    $border-width: 2px;
+
+    box-shadow:
+      inset (-$border-width) (-$border-width) rgba(0, 0, 0, 40%),
+      inset $border-width $border-width rgba(255, 255, 255, 40%)
+    ;
+  } @else if $shape == "plastic" {
+    // blurry 3d borders
+    background:
+      // brighten upper part
+      linear-gradient(180deg, rgba(255, 255, 255, 20%) 0%, rgba(255, 255, 255, 0%) 100%),
+      // put base color in background
+      $color
+    ;
+    border: none;
+    $border-width: 3px;
+    box-shadow:
+      inset (-$border-width) (-$border-width) $border-width rgba(0, 0, 0, 25%),
+      inset $border-width $border-width $border-width rgba(255, 255, 255, 25%)
+    ;
+  } @else if $shape == "glossy" {
+    // sharp 3d borders + glossy
+    background:
+      // brighten upper part
+      linear-gradient(180deg, rgba(255, 255, 255, 20%) 0%, rgba(255, 255, 255, 0%) 100%),
+      // darken lower part
+      linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 20%) 60%),
+      // put base color in background
+      $color
+    ;
+    border: none;
+    $border-width: 2px;
+    box-shadow:
+      inset (-$border-width) (-$border-width) rgba(0, 0, 0, 25%),
+      inset $border-width $border-width rgba(255, 255, 255, 25%)
+    ;
+  }
+}
+
+@mixin font($size: "normal", $weight: "regular") {
+  @if $compact {
+    font-size: map.get($font-sizes-compact, $size);
+  } @else {
+    font-size: map.get($font-sizes, $size);
+  }
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: map.get($font-weights, $weight);
+  text-shadow: 1px 1px 2px var(--background-color);
+}

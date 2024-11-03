@@ -37,6 +37,18 @@ export default class Switch extends FlareElement {
       this.removeAttribute('checked');
     }
   }
+
+  public get disabled(): boolean {
+    return this.hasAttribute('disabled');
+  }
+
+  public set disabled(value: boolean) {
+    if (value) {
+      this.setAttribute('disabled', 'disabled');
+    } else {
+      this.removeAttribute('disabled');
+    }
+  }
   //#endregion
 
   public constructor() {

@@ -82,17 +82,14 @@ export default class FlareElement extends HTMLElement {
   }
 
   protected addState(state: string): void {
-    // @ts-expect-error: Property `states` not in declaration of ElementInternals
     this.#internals.states.add(state);
   }
 
   protected deleteState(state: string): void {
-    // @ts-expect-error: Property `states` not in declaration of ElementInternals
     this.#internals.states.delete(state);
   }
 
   protected hasState(state: string): boolean {
-    // @ts-expect-error: Property `states` not in declaration of ElementInternals
     return this.#internals.states.has(state);
   }
 
@@ -152,12 +149,12 @@ export default class FlareElement extends HTMLElement {
       this.addEventListener('mousedown', mouseEvent => {
         if (mouseEvent.button == 0) {
           mouseDown = true;
-          this.addState('--pressed');
+          this.addState('pressed');
         }
 
         window.addEventListener('mouseup', () => {
           mouseDown = false;
-          this.deleteState('--pressed');
+          this.deleteState('pressed');
         }, {once: true});
       });
 
@@ -182,10 +179,10 @@ export default class FlareElement extends HTMLElement {
         this.addEventListener('keydown', keyEvent => {
           if (keyEvent.code == 'Space') {
             keyEvent.preventDefault();
-            this.addState('--pressed');
+            this.addState('pressed');
           } else if (keyEvent.code == 'Enter') {
             // do not prevent default so repeated keypress events can be triggered
-            this.addState('--pressed');
+            this.addState('pressed');
           }
         });
 
@@ -198,7 +195,7 @@ export default class FlareElement extends HTMLElement {
         this.addEventListener('keyup', keyEvent => {
           if (keyEvent.code == 'Space') {
             keyEvent.preventDefault();
-            this.deleteState('--pressed');
+            this.deleteState('pressed');
 
             this.emitActivateEvent();
           }

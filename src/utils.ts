@@ -1,6 +1,8 @@
-import { config } from '../package.json';
+import pkg from '../package.json';
 
-export { version } from '../package.json';
+const { config, version } = pkg;
+
+export { version };
 
 /**
  * Prefix used for the custom elements.

@@ -55,6 +55,18 @@ export default class TextInput extends FlareElement implements FormControl {
 
   #refreshHighlightScheduled = false;
 
+  public get disabled(): boolean {
+    return this.hasAttribute('disabled');
+  }
+
+  public set disabled(value: boolean) {
+    if (value) {
+      this.setAttribute('disabled', 'disabled');
+    } else {
+      this.removeAttribute('disabled');
+    }
+  }
+
   /**
    * Reflects the `multiline` attribute.
    */

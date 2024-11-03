@@ -1,0 +1,21 @@
+@use "theme";
+@use "style";
+
+@use "elements/checkbox";
+@use "elements/button";
+@use "elements/dropdown";
+@use "elements/input";
+@use "elements/label";
+@use "elements/layout";
+@use "elements/list";
+@use "elements/navigation";
+@use "elements/stepper";
+
+*:not(:defined) {
+  display: none;
+}
+
+body {
+  background: var(--background-color);
+  @include style.font();
+}

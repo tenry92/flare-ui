@@ -1,0 +1,19 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}stepper::part(button), #{utils.$prefix}number-input::part(button) {
+  border-radius: 0px;
+
+  &::after {
+    content: url("caret.svg");
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+  }
+}
+
+#{utils.$prefix}stepper::part(up), #{utils.$prefix}number-input::part(up) {
+  &::after {
+    transform: rotate(180deg);
+  }
+}

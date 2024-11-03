@@ -19,19 +19,20 @@ Other browsers are probably not or only partly supported.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents
+   :caption: Introduction
    :hidden:
 
    getting-started
-   widgets/index
+   about-custom-elements
+   styling/parts
+   styling/pseudo-classes
 
 .. toctree::
    :maxdepth: 1
-   :caption: Styling
+   :caption: Reference
    :hidden:
 
-   styling/parts
-   styling/pseudo-classes
+   reference/widgets/index
 
 .. toctree::
    :maxdepth: 1

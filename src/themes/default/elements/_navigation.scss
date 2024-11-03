@@ -1,0 +1,26 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}navigation-item {
+  @include style.font();
+  padding: style.$button-padding;
+
+  @include style.shape(var(--background-color));
+  color: var(--on-background-color);
+
+  &:hover {
+    @include style.shape(var(--background-color-hover));
+    color: var(--on-background-color-hover);
+  }
+
+  &:--pressed {
+    @include style.shape(var(--background-color-pressed));
+    color: var(--on-background-color-pressed);
+  }
+
+  &[active] {
+    @include style.font($weight: "bold");
+    border-left: 4px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+}

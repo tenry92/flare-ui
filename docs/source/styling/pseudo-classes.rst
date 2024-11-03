@@ -3,12 +3,12 @@ Pseudo-classes
 
 CSS provides many pseudo-classes such as ``:hover`` or ``:active``.
 This widget toolkit adds additional pseudo-classes to some of its widgets, such
-as ``:--open`` or ``:--pressed``.
+as ``:state(open)`` or ``:state(pressed)``.
 
-``:--pressed`` vs. ``:active``
-------------------------------
+``:state(pressed)`` vs. ``:active``
+-----------------------------------
 
-The custom pseudo-class ``:--pressed`` is semantically the same as ``:active``.
+The custom pseudo-class ``:state(pressed)`` is semantically the same as ``:active``.
 A regular HTML element will receive the ``:active`` class, when it's currently
 being clicked or, as with ``<button>`` for example, pressed using the keyboard
 (holding *Space*).

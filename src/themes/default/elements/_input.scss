@@ -1,0 +1,52 @@
+@use "../style";
+@use "../utils";
+
+#{utils.$prefix}text-input, #{utils.$prefix}dropdown, #{utils.$prefix}number-input::part(input) {
+  @include style.font();
+  @include style.border-radius("container");
+  border: 2px solid var(--surface-color);
+
+  background: var(--background-color);
+  color: var(--on-background-color);
+
+  @include utils.base-element(":hover") {
+    background: var(--background-color-hover);
+    color: var(--on-background-color-hover);
+  }
+}
+
+#{utils.$prefix}text-input, #{utils.$prefix}number-input::part(input) {
+  overflow: hidden;
+}
+
+#{utils.$prefix}text-input::part(content), #{utils.$prefix}dropdown::part(label) {
+  margin: style.$input-padding;
+  opacity: 0.8;
+}
+
+#{utils.$prefix}text-input, #{utils.$prefix}dropdown, #{utils.$prefix}number-input {
+  &::part(placeholder) {
+    color: var(--surface-color);
+  }
+
+  &:focus, &:focus-within {
+    @include style.focus();
+
+    &::part(content), &::part(label), &::part(input) {
+      opacity: 1;
+    }
+  }
+}
+
+#{utils.$prefix}number-input::part(content) {
+  margin: style.$input-padding;
+  text-align: right;
+}
+
+#{utils.$prefix}text-input[disabled] {
+  opacity: 0.5;
+}
+
+#{utils.$prefix}number-input[disabled] {
+  opacity: 0.5;
+}
